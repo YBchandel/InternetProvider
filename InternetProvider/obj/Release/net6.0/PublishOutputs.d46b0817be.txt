@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\InternetProvider.exe
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\InternetProvider.dll
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\InternetProvider.deps.json
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\InternetProvider.runtimeconfig.json
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\InternetProvider.pdb
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\Npgsql.dll
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
