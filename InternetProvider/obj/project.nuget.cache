@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+jj0jprud0kY1TdUbe7Q4/dDRi7NT4Ovb3nuPuoruOuaReGn2fACW7oVBUg3dwgbOy2Ed5dYCl3dEsECgIlGbw==",
+  "dgSpecHash": "ejwSCj6mOhUuFd/9hsV50e3ywXtCv2nlcQfPH1yg4RjdNFtVc1xsEshQO4SEjfJfuQTw9raEqBmN3Z0v43h4Xw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\source\\repos\\InternetProvider\\InternetProvider\\InternetProvider.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\common-lib-dot-net-core\\1.0.7\\common-lib-dot-net-core.1.0.7.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",

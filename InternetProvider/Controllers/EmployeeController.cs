@@ -5,14 +5,16 @@ using Microsoft.Extensions.Configuration;
 using Npgsql;
 using System.Data;
 using System.Net.NetworkInformation;
+using commonlib.dotnetcore; //-------LogFile
 
 namespace InternetProvider.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-
+        //var root=AppDomain.CurrentDomain.BaseDirectory +"\\logs";
         private readonly IConfiguration Configuration;   /// ******** constructure for connection String
         public EmployeeController(IConfiguration _configuration)
         {
@@ -60,6 +62,7 @@ namespace InternetProvider.Controllers
             }
             catch (Exception ex)
             {
+                log.Error(string.Empty, "EmployeeController", "InsertEmployee", "Error while inerst employee","Desc "+ ex.ToString());
                 // Handle exceptions and return appropriate response
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
@@ -104,6 +107,7 @@ namespace InternetProvider.Controllers
             }
             catch (Exception ex)
             {
+                log.Error(string.Empty, "EmployeeController", "UpdateEmployee", "Error while Updateing employee", "Desc " + ex.ToString());
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
         }
@@ -135,7 +139,7 @@ namespace InternetProvider.Controllers
                                 GetEmployee emp = new GetEmployee
                                 {
                                     Id = Convert.ToInt32(reader["id"]),
-                                    Emp_Id = reader["emp_id"].ToString(),
+                                    Emp_Id = reader["emp_idd"].ToString(),
                                     First_name = reader["first_name"].ToString(),
                                     Last_name = reader["last_name"].ToString(),
                                     Email = reader["email"].ToString(),
@@ -160,7 +164,7 @@ namespace InternetProvider.Controllers
                                 employees.Add(emp);
                             }
 
-                            employees = employees.OrderBy(e => e.Status == "Approved" ? 0 : e.Status == "pending" ? 1 : 2).ToList();
+                            employees = employees.OrderBy(e => e.Status == "Approved" ? 0 : e.Status == "Pending" ? 1 : 2).ToList();
 
                             return Ok(employees);
                         }
@@ -169,6 +173,7 @@ namespace InternetProvider.Controllers
             }
             catch (Exception ex)
             {
+                log.Error(string.Empty, "EmployeeController", "GetEmployees", "Error while  GetEmployees", "Desc " + ex.ToString());
                 // Handle exceptions and return appropriate response
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
@@ -251,6 +256,7 @@ namespace InternetProvider.Controllers
                             }
                             else
                             {
+
                                 return NotFound($"Employee with ID {emp_id} not found.");
                             }
                         }
@@ -259,6 +265,7 @@ namespace InternetProvider.Controllers
             }
             catch (Exception ex)
             {
+                log.Error(string.Empty, "EmployeeController", "GetEmployee", "Error while GetEmployee_By_Id", "Desc " + ex.ToString());
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
         }
@@ -313,8 +320,8 @@ namespace InternetProvider.Controllers
                                    Position = reader["p_position"].ToString(),
                                    Status = reader["p_status"].ToString(),
                                    //requested_date = reader["p_requested_date"].ToString(),
-                                   requested_date = reader["p_requested_date"] != DBNull.Value ? Convert.ToDateTime(reader["p_requested_date"]) : (DateTime?)null,
-                                   action_date = reader["p_approval_date"] != DBNull.Value ? Convert.ToDateTime(reader["p_approval_date"]) : (DateTime?)null,
+                                   requested_date = reader["requested_date"] != DBNull.Value ? Convert.ToDateTime(reader["requested_date"]) : (DateTime?)null,
+                                   action_date = reader["approval_date"] != DBNull.Value ? Convert.ToDateTime(reader["approval_date"]) : (DateTime?)null,
                                    //action_date = Convert.ToDateTime(reader["p_approval_date"]),
                                    //Phone = reader["phone"].ToString(),
                                    Phone = Convert.ToInt64(reader["phone"]),
@@ -338,6 +345,8 @@ namespace InternetProvider.Controllers
 
             catch (Exception ex)
             {
+                log.Error(string.Empty, "EmployeeController", "GetEmployeesByStatus", "Error while Get_Employee_Status", "Desc " + ex.ToString());
+
                 return StatusCode(500, $"An error occurred: {ex.Message}");
             }
 

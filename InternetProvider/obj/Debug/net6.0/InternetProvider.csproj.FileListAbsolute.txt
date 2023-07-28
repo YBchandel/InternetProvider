@@ -36,3 +36,4 @@ C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Debug\net6.0\
 C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Debug\net6.0\InternetProvider.pdb
 C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Debug\net6.0\InternetProvider.genruntimeconfig.cache
 C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\obj\Debug\net6.0\ref\InternetProvider.dll
+C:\Users\Lenovo\source\repos\InternetProvider\InternetProvider\bin\Debug\net6.0\common-lib-dot-net-core.dll

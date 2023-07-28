@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "common-lib-dot-net-core/1.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/common-lib-dot-net-core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/common-lib-dot-net-core.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cors/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -350,6 +359,17 @@
     }
   },
   "libraries": {
+    "common-lib-dot-net-core/1.0.7": {
+      "sha512": "mfYf2XXDpTqBRkc4+t/WsZsVH3eKRBllLkn8QjC+CTQY3HqEsLfGkia2kcZc4ssxdllQA92HkoNhyyxQ2le1Qg==",
+      "type": "package",
+      "path": "common-lib-dot-net-core/1.0.7",
+      "files": [
+        ".nupkg.metadata",
+        "common-lib-dot-net-core.1.0.7.nupkg.sha512",
+        "common-lib-dot-net-core.nuspec",
+        "lib/netcoreapp3.1/common-lib-dot-net-core.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Cors/2.2.0": {
       "sha512": "LFlTM3ThS3ZCILuKnjy8HyK9/IlDh3opogdbCVx6tMGyDzTQBgMPXLjGDLtMk5QmLDCcP3l1TO3z/+1viA8GUg==",
       "type": "package",
@@ -874,7 +894,8 @@
     "net6.0": [
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Npgsql >= 7.0.4",
-      "Swashbuckle.AspNetCore >= 6.2.3"
+      "Swashbuckle.AspNetCore >= 6.2.3",
+      "common-lib-dot-net-core >= 1.0.7"
     ]
   },
   "packageFolders": {
@@ -928,6 +949,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.3, )"
+          },
+          "common-lib-dot-net-core": {
+            "target": "Package",
+            "version": "[1.0.7, )"
           }
         },
         "imports": [
